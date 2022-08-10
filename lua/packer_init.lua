@@ -4,12 +4,6 @@
 
 -- Plugin manager: packer.nvim
 -- url: https://github.com/wbthomason/packer.nvim
-
--- For information about installed plugins see the README:
--- neovim-lua/README.md
--- https://github.com/brainfucksec/neovim-lua#readme
-
-
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -67,7 +61,7 @@ return packer.startup(function(use)
   -- Treesitter interface
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() 
+    run = function()
       require('nvim-treesitter.install').update({ with_sync = true })
       end,
   }

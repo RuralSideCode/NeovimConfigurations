@@ -1,1 +1,1 @@
-:execute "GuiFont! Consolas:h14"
+:execute "GuiFont! RobotoMono Nerd Font:h14"
