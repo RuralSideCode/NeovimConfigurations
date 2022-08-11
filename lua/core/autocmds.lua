@@ -69,3 +69,8 @@ autocmd('BufLeave', {
   pattern = 'term://*',
   command = 'stopinsert'
 })
+
+autocmd('FileType', {
+  pattern = { 'xml', 'html' },
+  command = 'set omnifunc=htmlcomplete#CompleteTags'
+})
