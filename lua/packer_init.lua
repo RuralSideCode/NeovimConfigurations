@@ -88,6 +88,10 @@ return packer.startup(function(use)
     },
   }
 
+  use {
+    'kabouzeid/nvim-lspinstall'
+  }
+
   -- Statusline
   use {
     'feline-nvim/feline.nvim',
@@ -133,6 +137,14 @@ return packer.startup(function(use)
     require("toggleterm").setup()
   end}
 
+
+  -- Comment out stuff
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
