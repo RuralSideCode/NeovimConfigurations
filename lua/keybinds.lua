@@ -10,4 +10,9 @@ nmap('<leader>w', '<C-w>')
 -- Neotree toggle
 nmap('<C-n>', ':Neotree toggle<enter>')
 
-
+-- Telescope bindings
+local tel = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', tel.find_files, {})
+vim.keymap.set('n', '<leader>fg', tel.live_grep, {})
+vim.keymap.set('n', '<leader>fb', tel.buffers, {})
+vim.keymap.set('n', '<leader>fh', tel.help_tags, {})

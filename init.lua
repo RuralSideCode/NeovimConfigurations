@@ -37,3 +37,22 @@ vim.cmd.colorscheme('gruvbox')
 
 -- Font
 VimSet('guifont', 'RobotoMono')
+
+-- Neotree configurations
+require('neo-tree').setup {
+    filesystem = {
+        filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = false
+        }
+    }
+}
+
+-- Tree-sitter Config
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query' },
+    sync_install = false,
+    auto_install = true,
+    highlight = { enable = true }
+}

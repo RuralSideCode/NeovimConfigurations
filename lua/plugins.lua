@@ -1,5 +1,3 @@
-
-
 return require('packer').startup(function(use)
     -- Packer
     use('wbthomason/packer.nvim')
@@ -21,5 +19,16 @@ return require('packer').startup(function(use)
 
     -- Conquer of Completion (Autocomplete)
     use {'neoclide/coc.nvim', branch = 'release'}
+
+    -- Tree-sitter
+    use('nvim-treesitter/nvim-treesitter')
+
+    -- Plenary (lua lib)
+    use('nvim-lua/plenary.nvim')
+
+    -- Telescope (File finder)
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.5',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
 end)
 
