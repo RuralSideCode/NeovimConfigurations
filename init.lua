@@ -61,6 +61,6 @@ require('nvim-treesitter.configs').setup {
 -- Telescope Config
 require('telescope').setup{
     defaults = {
-        mappings = require('lua.keybinds').telescope
+        mappings = require('keybinds').telescope
     }
 }
