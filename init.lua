@@ -11,9 +11,6 @@
 require('plugins')
 require('keybinds')
 
--- Nvim Web-dev Icons
-require('nvim-web-devicons').get_icons()
-
 function VimSet(option, value)
     local cmd = ':set ' .. option
     if value then cmd = cmd .. '=' .. value end
