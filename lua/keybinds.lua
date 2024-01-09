@@ -2,6 +2,12 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = ' '
 
 -- Normal Mode Key Map
-function nmap(lhs, rhs) keymap('n', lhs, rhs, {}) end
+local function nmap(keyCombo, vimAction, opts) opts = opts or {}; keymap('n', keyCombo, vimAction, opts) end
 
-nmap('<leader>ff', ':set number!<enter>')
+-- Window control
+nmap('<leader>w', '<C-w>')
+
+-- Neotree toggle
+nmap('<C-n>', ':Neotree toggle<enter>')
+
+
