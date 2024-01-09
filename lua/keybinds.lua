@@ -16,3 +16,17 @@ vim.keymap.set('n', '<leader>ff', tel.find_files, {})
 vim.keymap.set('n', '<leader>fg', tel.live_grep, {})
 vim.keymap.set('n', '<leader>fb', tel.buffers, {})
 vim.keymap.set('n', '<leader>fh', tel.help_tags, {})
+
+local tAction = require('telescope.actions')
+local telescopeMappings = {
+    i = {
+        -- Allows for file selection via the cursor in insert mode
+        ['<C-k>'] = tAction.move_selection_previous,
+        ['<C-j>'] = tAction.move_selection_next,
+
+        -- Escape in insert will close instead of going into normal mode
+        ['<escape>'] = tAction.close
+    }
+}
+
+return { telescope = telescopeMappings }

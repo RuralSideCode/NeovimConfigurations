@@ -57,3 +57,10 @@ require('nvim-treesitter.configs').setup {
     auto_install = true,
     highlight = { enable = true }
 }
+
+-- Telescope Config
+require('telescope').setup{
+    defaults = {
+        mappings = require('lua.keybinds').telescope
+    }
+}
