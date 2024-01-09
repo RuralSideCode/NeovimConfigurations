@@ -7,6 +7,9 @@
     vim.env: environment variables defined in the editor session 
 ]]
 
+require('plugins')
+require('keybinds')
+
 function VimSet(option, value)
     local cmd = ':set ' .. option
     if value then cmd = cmd .. '=' .. value end
