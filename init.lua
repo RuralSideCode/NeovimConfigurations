@@ -46,7 +46,8 @@ require('neo-tree').setup {
             hide_dotfiles = false,
             hide_gitignored = false
         }
-    }
+    },
+    window = { width = 23 }
 }
 
 -- Tree-sitter Config
