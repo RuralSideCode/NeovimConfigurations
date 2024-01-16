@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- Conquer of Completion (Autocomplete)
-    use {'neoclide/coc.nvim', branch = 'release'}
+    -- You Complete Me (Autocomplete)
+    use('ycm-core/YouCompleteMe')
 
     -- Tree-sitter
     use('nvim-treesitter/nvim-treesitter')
