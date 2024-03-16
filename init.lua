@@ -63,3 +63,11 @@ require('telescope').setup{
         mappings = require('keybinds').telescope
     }
 }
+
+require("toggleterm").setup{
+    -- size can be a number or function which is passed the current terminal
+    size = 20,
+    persist_size = true,
+    persist_mode = true, -- if set to true (default) the previous terminal mode will be remembered
+    direction = 'float',
+}

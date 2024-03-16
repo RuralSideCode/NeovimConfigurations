@@ -29,4 +29,7 @@ local telescopeMappings = {
     }
 }
 
+-- Toggle Term
+nmap('<leader>tt', ':ToggleTerm<enter>')
+
 return { telescope = telescopeMappings }
